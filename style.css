@@ -1,0 +1,277 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior:smooth ;
+	font-family: 'Courier Prime', monospace;
+	user-select: none;
+}
+header{
+	position: fixed;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	z-index: 1000;
+
+}
+header.sticky{
+	background: blue;
+}
+header .logo{
+color: gold;
+font-weight: 800;
+font-size: 2em;
+padding: 20px 50px;
+font-variant: small-caps;
+text-shadow: 0px 0px 10px black,
+   			 0px 0px 15px black,
+   			 0px 0px 20px black,
+   			 0px 0px 25px black;
+}
+header .menu{
+	position: relative;
+	display: flex;
+}
+header .menu li{
+	position: relative;
+	padding-right: 40px;
+	list-style: none;
+	animation: animate 0.6s linear infinite;
+animation-direction: alternate;
+
+}
+header .menu li a{
+	position: relative;
+font-size: 1.5em;
+font-weight: 600;
+margin: 20px 20px;
+text-decoration: none;
+color: orange;
+font-variant: small-caps;
+text-shadow: 0px 0px 2px red;
+
+}
+@keyframes animate{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+
+		transform: scale(1.1);
+	 }
+	}
+header li:hover {
+    animation-play-state: paused;   
+}
+header .menu li a::before{
+	content: " ";
+	position: absolute;
+	top: 110%;
+	left: 0;
+	border-bottom: 2px groove gold;
+	box-shadow: 0px 0px 10px 0 gold;
+	height: 2px;
+	width: 0;
+	transition: all 0.4s linear;
+}
+header .menu li a:hover::before{
+	width: 100%;
+}
+#banner{
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+	justify-content: space-between;
+	align-items: center;
+	background: #111;
+}
+.img{
+	position: absolute;
+	top: 20%;
+	right: 60px;
+	background: url('img/1.jpg');
+	background-repeat: no-repeat;
+	border-radius: 20px;
+	background-size: cover;
+	background-position: right;
+	height: 25rem;
+	width: 20rem;
+	
+}
+.heading.w50{
+	max-width: 60%;
+}
+.img.w50{
+	max-width: 40%;
+}
+.heading h1{
+	color: #fff;
+	text-align: center;
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+.heading p{
+	color: #fff;
+	padding: 10px 30px;
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+section{
+	padding: 100px;
+}
+#first{
+	background: url('img/3.jpg');
+	width: 100wh;
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#second{
+	background:url('img/4.png');
+	background-color: rgba(0, 0, 100, 0.2);
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	object-fit: cover;
+}
+@media(max-width: 883px){
+	#banner{
+		flex-direction: column;
+	}
+	.heading.w50 {
+    max-width: 100%;
+}
+.img {
+    top: 50%;
+    height: 17rem;
+    right: 40%;
+    width: 16rem;
+}
+#banner {
+    padding-top: 113px;
+}
+.heading p {
+    padding: 4px 26px;
+    font-size: 1em;
+
+}
+}
+
+
+
+/* ***88888888**** */
+@media(max-width: 725px){
+.img {
+    top: 54%;
+    height: 15rem;
+    width: 14rem;
+}
+.heading p {
+    font-size: 1em;
+    line-height: 1.4em;
+
+}
+}
+
+
+/* ***88888888**** */
+@media(max-width: 605px){
+.img {
+    top: 54%;
+    height: 15rem;
+    width: 14rem;
+}
+.heading p {
+    font-size: 1em;
+    line-height: 1.4em;
+
+}
+.heading h1 {
+    font-size: 1.7em;
+    margin-bottom: 18px;
+}
+.img {
+ 
+    right: 34%;
+}
+header .menu li {
+    padding-right: 1px;
+}
+}
+
+
+
+
+/* ***88888888**** */
+@media(max-width: 503px){
+.img {
+    top: 62%;
+    height: 12rem;
+    width: 12rem;
+}
+header .menu li a {
+    font-size: 1.2em;
+      margin: 20px 12px;
+
+}
+}
+
+
+
+
+/* ***88888888**** */
+@media(max-width: 421px){
+.img {
+    top: 69%;
+    height: 10rem;
+    width: 10rem;
+}
+header .menu li a {
+    font-size: 1.2em;
+      margin: 20px 12px;
+
+}
+header .logo {
+    font-size: 1.5em;
+}
+}
+
+
+
+
+/* ***88888888**** */
+@media(max-width: 380px){
+
+header .logo {
+    font-size: 1.5em;
+        padding: 20px 15px;
+}
+.heading h1 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+}
+
+
+
+
+/* ***88888888**** */
+@media(max-width: 325px){
+
+header .logo {
+    font-size: 1.5em;
+        padding: 20px 11px;
+}
+.heading h1 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+.heading p {
+    font-size: 1em;
+    line-height: 1.2em;
+
+}
+}

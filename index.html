@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="new.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap" rel="stylesheet">
+	<title>Document</title>
+</head>
+<body>
+		
+	
+	<header>
+		<div class="logo">Legend~D</div>
+		<div class="toggle"><!-- &#9776 &#9747 --></div>
+		<ul class="menu">
+			<li><a href="#">home</a></li>
+			<li><a href="#first">first</a></li>
+			<li><a href="#second">second</a></li>
+		</ul>
+		
+	</header><!-- /header -->
+	<div id="banner">
+<div class="heading w50">
+	<h1>Why Legends Never Die ?</h1>
+<p>Most of us like legends. They’re something to 
+hand down generation after -generation.
+ A legend “dies” when evidence-beyond a reasonable 
+doubt-clearly shows it is not true. Not with standing,
+ the legend may still be “alive” because so many want
+ it to be. Most of the time, legends are harmless.</p>
+</div>
+<div class="img w50"></div>
+	</div>	
+
+
+	<section id="first">
+		
+	</section>
+
+	<section id="second">
+		
+	</section>
+
+	<script type="text/javascript">
+		window.addEventListener('scroll',() =>{
+         var header=document.querySelector('header');
+         header.classList.toggle('sticky',window.scrollY >0);
+		});
+	</script>
+</body>
+</html>
